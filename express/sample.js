@@ -1,8 +1,8 @@
-function add(a, b, callback){
-    callback(a + b);
+function addAsync(a, b, callback){
+    setTimeout(() => callback(a + b), 100);
 }
 console.log("before");
 
-add(1, 2, result => console.log("Result:" + result));
+addAsync(1, 2, result => console.log("Result:" + result));
 
 console.log("after");
